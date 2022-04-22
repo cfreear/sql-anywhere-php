@@ -200,9 +200,9 @@ zend_function_entry sqlanywhere_functions[] = {
     	/* connection functions */
 	PHP_FE(sasql_connect,				NULL)
 	PHP_FE(sasql_pconnect,				NULL)
-	PHP_FE(sasql_pconnect_from_sqlca,		NULL)
-	PHP_FE(sasql_close,				NULL)
-	PHP_FE(sasql_query,				NULL)
+	PHP_FE(sasql_pconnect_from_sqlca,	NULL)
+	PHP_FE(sasql_close,					NULL)
+	PHP_FE(sasql_query,					NULL)
 	PHP_FE(sasql_real_query,			NULL)
 	PHP_FE(sasql_store_result,			NULL)
 	PHP_FE(sasql_use_result,			NULL)
@@ -229,7 +229,7 @@ zend_function_entry sqlanywhere_functions[] = {
 	PHP_FE(sasql_result_all,			NULL)
 
 	/* connection functions */
-	PHP_FE(sasql_error,				NULL)
+	PHP_FE(sasql_error,					NULL)
 	PHP_FE(sasql_errorcode,				NULL)
 	PHP_FE(sasql_insert_id,				NULL)
 	PHP_FE(sasql_message,				NULL)
