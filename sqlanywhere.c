@@ -92,6 +92,14 @@ ZEND_DECLARE_MODULE_GLOBALS(sqlanywhere)
 #if (PHP_MAJOR_VERSION < 5) || \
     (PHP_MAJOR_VERSION == 5 && PHP_MINOR_VERSION <= 5)
 
+ZEND_BEGIN_ARG_INFO(arginfo_sasql_connect, 1)
+  ZEND_ARG_PASS_INFO(0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO(arginfo_sasql_pconnect, 1)
+  ZEND_ARG_PASS_INFO(0)
+ZEND_END_ARG_INFO()
+
 ZEND_BEGIN_ARG_INFO(arginfo_sasql_stmt_bind_param_ex, 0)
   ZEND_ARG_PASS_INFO(0)
   ZEND_ARG_PASS_INFO(0)
@@ -108,6 +116,14 @@ ZEND_BEGIN_ARG_INFO(arginfo_sasql_stmt_bind_result, 1)
 ZEND_END_ARG_INFO()
 
 #else
+
+ZEND_BEGIN_ARG_INFO(arginfo_sasql_connect, 0)
+  ZEND_ARG_INFO(0, conn_str)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO(arginfo_sasql_pconnect, 0)
+  ZEND_ARG_INFO(0, conn_str)
+ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO(arginfo_sasql_stmt_bind_param_ex, 0)
   ZEND_ARG_INFO(0, stmt)
@@ -198,8 +214,8 @@ PHP_FUNCTION(sasql_use_result);
  */
 zend_function_entry sqlanywhere_functions[] = {
     	/* connection functions */
-	PHP_FE(sasql_connect,				NULL)
-	PHP_FE(sasql_pconnect,				NULL)
+	PHP_FE(sasql_connect,				arginfo_sasql_connect)
+	PHP_FE(sasql_pconnect,				arginfo_sasql_pconnect)
 	PHP_FE(sasql_pconnect_from_sqlca,	NULL)
 	PHP_FE(sasql_close,					NULL)
 	PHP_FE(sasql_query,					NULL)
