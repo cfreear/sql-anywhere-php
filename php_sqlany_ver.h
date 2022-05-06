@@ -1,12 +1,12 @@
 // ***************************************************************************
-// Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
+// Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
 // ***************************************************************************
 #ifndef PHP_SQLANY_VER
 #define PHP_SQLANY_VER
 
 #define PHP_SA_MAJOR 	2
 #define PHP_SA_MINOR 	0
-#define PHP_SA_PATCH 	18
+#define PHP_SA_PATCH 	19
 #define PHP_SA_BUILD    1
 
 #define _php_str( x ) # x
