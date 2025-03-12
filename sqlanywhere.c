@@ -3772,7 +3772,7 @@ PHP_FUNCTION(sasql_stmt_bind_param)
 #if PHP_MAJOR_VERSION >= 7
     if( ZEND_NUM_ARGS() - 2 != Z_STRLEN( args[1] ) ) {
 	php_error_docref(NULL TSRMLS_CC, E_WARNING, 
-		"The num of type characters supplied (%d) does not match the number of parameters supplied (%d)",  
+		"The num of type characters supplied (%zu) does not match the number of parameters supplied (%d)",  
 		Z_STRLEN(args[1]), ZEND_NUM_ARGS() - 2 );
 #else
     if( ZEND_NUM_ARGS() - 2 != Z_STRLEN_PP(args[1] ) ) {
